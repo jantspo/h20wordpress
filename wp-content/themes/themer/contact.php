@@ -7,17 +7,20 @@
 <br class="clear">
 
 <div class="row">
-    <div class="col-md-8 col-md-offset-2">
+    <div class="col-md-10 col-md-offset-1">
         <form class="form-inline">
             <div class="form-group">
-                <label for="exampleInputName2">Name</label>
-                <input type="text" class="form-control" id="inputName" placeholder="Jane Doe">
+                <label for="InputName1">First Name</label>
+                <input type="text" class="form-control" id="inputName1" placeholder="Jane">
+            </div>
+            <div class="form-group">
+                <label for="InputName2">Last Name</label>
+                <input type="email" class="form-control" id="inputName2" placeholder="Doe">
             </div>
             <div class="form-group">
                 <label for="exampleInputEmail2">Email</label>
                 <input type="email" class="form-control" id="inputEmail" placeholder="jane.doe@example.com">
             </div>
-            <button type="submit" class="btn btn-default">Send invitation</button>
         </form>
     </div>
 </div>

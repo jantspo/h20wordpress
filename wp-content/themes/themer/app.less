@@ -1,14 +1,17 @@
 
 
 //---------- GLOBAL STYLING
-*{
+*, *:before, *:after{
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
-  font-size: 16px;
+  font-size: 14px;
 }
 
 h2, h3{
   text-align: center;
   text-transform: uppercase;
+
 }
 
 p{
@@ -22,6 +25,14 @@ section{
 
 
 //-------------- SECTION SPECIFIC STYLING --------
+#process h3 {
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  line-height: 150px;
+  border: 1px solid #000;
+  margin: 0 auto;
+}
 
 
 
@@ -73,6 +84,18 @@ section{
   max-width:1000px;
 }
 
-.navbar li a{
-  text-transform: uppercase;
+.navbar {
+  margin-bottom: 0;
+  li a {
+    text-transform: uppercase;
+  }
+}
+
+textarea.form-control {
+  margin: 10px 0;
+}
+
+.btn-group-lg>.btn, .btn-lg {
+  border-radius: 0;
+  margin-bottom: 15px;
 }

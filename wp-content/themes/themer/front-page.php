@@ -8,6 +8,11 @@
 <!--                <h2>--><?php //echo $post->post_name; ?><!--</h2>-->
                 <?php $post->post_name; ?>
                 <?php get_template_part($post->post_name); ?>
+                <div class="row">
+                    <div class="col-sm-2 col-md-2 col-md-offset-5 col-md-offset-10"> <button type="button" class="btn btn-default btn-lg">Contact Us</button></div>
+                </div>
+
+
             </section>
         <?php endwhile; endif; ?>
         <!-- /section -->
