@@ -32,14 +32,23 @@
 			<header class="header clear" role="banner">
 
 <!-- logo -->
-					<div class="logo">
-						<a href="<?php echo home_url(); ?>">
-							<!-- svg logo - toddmotto.com/mastering-svg-use-for-a-retina-web-fallbacks-with-png-script -->
-							<img src="<?php echo get_template_directory_uri(); ?>/img/logo.svg" alt="Logo" class="logo-img">
-						</a>
+				<div class="row">
+					<div class="col-sm-10">
+						<div class="logo">
+							<a href="<?php echo home_url(); ?>">
+								<!-- svg logo - toddmotto.com/mastering-svg-use-for-a-retina-web-fallbacks-with-png-script -->
+								<img src="http://localhost:8080/wp-content/uploads/2015/02/logo-lg.png" alt="Logo" class="logo-img">
+							</a>
+						</div>
 					</div>
+					<div class="col-sm-2">
+						<div class="sign-in">
+							<a href="">Sign In</a>
+						</div>
+					</div>
+				</div>
 <!-- /logo -->
-
+<!--				--><?php //echo get_template_directory_uri(); ?>
 <!-- nav -->
 				<nav class="navbar navbar-default">
 					<div class="container-fluid">

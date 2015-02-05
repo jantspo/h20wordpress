@@ -20,7 +20,7 @@
                 <div class="clearfix visible-sm-block"></div>
             <?php endif; ?>
 
-        <div class="process col-sm-6 col-md-3">
+        <div class="col-sm-6 col-md-3">
             <?php the_post_thumbnail('small', array('style' => 'float: left; margin-right: 20px;')); ?>
             <h3><?php the_title(); ?></h3>
             <?php the_content(); ?>

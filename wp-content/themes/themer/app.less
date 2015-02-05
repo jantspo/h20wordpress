@@ -25,13 +25,19 @@ section{
 
 
 //-------------- SECTION SPECIFIC STYLING --------
-#process h3 {
+#process {
+  h3 {
   height: 150px;
   width: 150px;
   border-radius: 50%;
   line-height: 150px;
   border: 1px solid #000;
   margin: 0 auto;
+  }
+  h3:first-child{
+    background: url('http://localhost:8080/wp-content/uploads/2015/02/MegaSprite.gif') no-repeat center center fixed;
+    background-size: cover;
+  }
 }
 
 
@@ -83,6 +89,10 @@ section{
 .container{
   max-width:1000px;
 }
+.container-fluid {
+  padding-right: 0;
+  padding-left: 0;
+}
 
 .navbar {
   margin-bottom: 0;
@@ -98,4 +108,25 @@ textarea.form-control {
 .btn-group-lg>.btn, .btn-lg {
   border-radius: 0;
   margin-bottom: 15px;
+}
+
+@media(min-width:1000px) {
+  ul.nav {
+    width: 100%;
+  }
+
+  .navbar-nav > li {
+    float: left;
+    width: 16.666667%;
+    text-align: center;
+  }
+}
+
+
+//------------------------TESTING ONLY
+
+#farmitrx{
+  background: url(http://localhost:8080/wp-content/uploads/2015/02/asoiaf-a-song-of-ice-and-fire-30711921-1458-16261.jpg) no-repeat;
+  background-size: cover;
+  height: 1000px
 }

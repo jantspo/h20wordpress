@@ -1,4 +1,5 @@
 			<!-- footer -->
+
 			<footer class="footer" role="contentinfo">
 
 				<!-- copyright -->
@@ -26,5 +27,5 @@
 		ga('send', 'pageview');
 		</script>
 
-	</body>
+</body>
 </html>
