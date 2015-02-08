@@ -17,13 +17,13 @@
             </div>
             <div class="row">
             <?php endif; ?>
-<!--            --><?php //if ($loopCount >= 2): $loopCount = 0; ?>
-<!--                <div class="clearfix visible-sm-block"></div>-->
-<!--            --><?php //endif; ?>
 
             <div class="col-sm-8 col-md-4 col-sm-offset-2 col-md-offset-0">
                 <h3><?php the_title(); ?></h3>
                 <?php the_content(); ?>
             </div>
     <?php $loopItr++; endwhile; endif; ?>
+    <div class="row">
+        <div class="col-sm-2 col-md-2 col-sm-offset-5 col-md-offset-10"> <button type="button" class="btn btn-default btn-lg">Contact Us</button></div>
+    </div>
 </div>

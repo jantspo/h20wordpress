@@ -50,7 +50,7 @@
 <!-- /logo -->
 <!--				--><?php //echo get_template_directory_uri(); ?>
 <!-- nav -->
-				<nav class="navbar navbar-default">
+				<nav class="navbar navbar-default" id="sticker">
 					<div class="container-fluid">
 						<!-- Brand and toggle get grouped for better mobile display -->
 						<div class="navbar-header">
