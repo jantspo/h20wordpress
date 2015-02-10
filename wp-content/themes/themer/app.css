@@ -6,6 +6,9 @@
   box-sizing: border-box;
   font-size: 14px;
 }
+body {
+  position: relative;
+}
 h2,
 h3 {
   text-align: center;
@@ -16,6 +19,14 @@ p {
 }
 section {
   border-bottom: 2px solid #000 ;
+}
+#data-models h3 {
+  border: 1px solid #ccc;
+  padding: 5px;
+  background-color: #e3e3e3;
+}
+#slogan {
+  padding-top: 20px;
 }
 #process h3 {
   height: 150px;
@@ -66,10 +77,22 @@ section {
     column-gap: 30px;
   }
 }
+@media (max-width: 480px) {
+  .content {
+    display: none;
+  }
+  .active {
+    display: block;
+  }
+  #data-models h3:hover {
+    background-color: #fff;
+  }
+}
 .container {
   max-width: 1000px;
 }
-.container-fluid {
+.container-fluid,
+.container {
   padding-right: 0;
   padding-left: 0;
 }
@@ -78,6 +101,17 @@ section {
 }
 .navbar li a {
   text-transform: uppercase;
+}
+.navbar-default {
+  background-color: #fff;
+  z-index: 100;
+}
+.navbar-default .navbar-nav > li > a {
+  font-weight: 700;
+  font-size: 16px;
+}
+.affix {
+  top: 0;
 }
 textarea.form-control {
   margin: 10px 0;
@@ -88,18 +122,22 @@ textarea.form-control {
   margin-bottom: 15px;
 }
 @media (min-width: 1000px) {
-  ul.nav {
-    width: 100%;
-  }
   .navbar-nav > li {
     float: left;
     width: 16.666667%;
     text-align: center;
   }
 }
-.navbar-default .navbar-nav > li > a {
-  font-weight: 700;
-  font-size: 16px;
+.container > .navbar-header {
+  margin-right: 0;
+  margin-left: 0;
+}
+.row {
+  margin-right: 0;
+  margin-left: 0;
+}
+.navbar-default .navbar-toggle {
+  margin-left: 15px;
 }
 #farmitrx {
   background: url(http://localhost:8080/wp-content/uploads/2015/02/FARMitRx-Interface-Screen-Shot-4.jpg) no-repeat;

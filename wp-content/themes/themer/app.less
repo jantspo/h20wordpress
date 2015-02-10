@@ -1,6 +1,13 @@
+//=====================================VARIABLES
+@primary: #fff;
+@seconday: #111;
+@tertiary: #555;
 
 
-//---------- GLOBAL STYLING
+
+//==================================================== GLOBAL STYLING
+
+
 *, *:before, *:after{
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -8,10 +15,12 @@
   font-size: 14px;
 }
 
+body{
+  position:relative;
+}
 h2, h3{
   text-align: center;
   text-transform: uppercase;
-
 }
 
 p{
@@ -22,9 +31,21 @@ section{
   border-bottom:2px solid #000 ;
 }
 
+#data-models {
+  h3{
+    border: 1px solid #ccc;
+    padding: 5px;
+    background-color: #e3e3e3;
+  }
+}
 
+#slogan{
+  padding-top:20px;
+}
 
-//-------------- SECTION SPECIFIC STYLING --------
+//====================================================SECTION SPECIFIC STYLING =====================================
+
+// Process section styling
 #process {
   h3 {
   height: 150px;
@@ -43,6 +64,7 @@ section{
   }
 }
 
+
 .sign-in{
   line-height:80px;
 }
@@ -55,7 +77,8 @@ section{
 
 
 
-// ------------ MEDIA QUERIES ---------------
+// =================================================== MEDIA QUERIES -==========================
+//ABOUT AND CONSULTING COLUMNS
 @media (min-width: 768px) {
   #two-column p {
     -webkit-column-count: 2;
@@ -88,23 +111,52 @@ section{
   }
 }
 
+@media (max-width: 480px){
 
 
-//----------- BOOTSTRAP OVERRIDES --------
+  .content{
+    display: none;
+  }
+
+  .active{
+    display: block;
+  }
+  #data-models {
+    h3:hover{
+      background-color: #fff;
+    }
+  }
+
+}
+
+
+//================================== BOOTSTRAP OVERRIDES ===============================
 
 .container{
   max-width:1000px;
 }
-.container-fluid {
+.container-fluid, .container {
   padding-right: 0;
   padding-left: 0;
 }
-
+//BOOTSTRAP Navigation Overrides
 .navbar {
   margin-bottom: 0;
   li a {
     text-transform: uppercase;
   }
+}
+
+.navbar-default {
+  background-color: #fff;
+  z-index: 100;
+}
+.navbar-default .navbar-nav>li>a {
+  font-weight: 700;
+  font-size: 16px;
+}
+.affix{
+  top:0;
 }
 
 textarea.form-control {
@@ -118,7 +170,7 @@ textarea.form-control {
 
 @media(min-width:1000px) {
   ul.nav {
-    width: 100%;
+//    width: 100%;
   }
 
   .navbar-nav > li {
@@ -128,12 +180,20 @@ textarea.form-control {
   }
 }
 
-.navbar-default .navbar-nav>li>a {
-  font-weight: 700;
-  font-size: 16px;
+.container>.navbar-header {
+   margin-right: 0;
+   margin-left: 0;
 }
 
-//------------------------TESTING ONLY
+.row {
+  margin-right: 0;
+  margin-left: 0;
+}
+
+.navbar-default .navbar-toggle {
+  margin-left: 15px;
+}
+//=============================== TESTING AND PLACEHOLDER STYLINGS ONLY
 
 #farmitrx{
   background: url(http://localhost:8080/wp-content/uploads/2015/02/FARMitRx-Interface-Screen-Shot-4.jpg) no-repeat;

@@ -101,6 +101,23 @@ function html5blank_header_scripts()
         wp_register_script('html5blankscripts', get_template_directory_uri() . '/js/scripts.js', array('jquery'), '1.0.0'); // Custom scripts
         wp_enqueue_script('html5blankscripts'); // Enqueue it!
 
+
+        wp_register_script( 'jquery', '//code.jquery.com/jquery-2.1.3.min.js', array('jquery'), '2.1.3', true); // we need the jquery library for bootsrap js to function
+        wp_enqueue_script('jquery');
+
+        wp_register_script( 'bootstrap-js', '//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"', array('jquery'), true); // all the bootstrap javascript goodness
+        wp_enqueue_script('bootstrap-js');
+
+        wp_register_script('smooth-scroll', get_template_directory_uri() . '/js/lib/smooth-scroll.js', array('jquery'), '1.0.0'); // Custom scripts
+        wp_enqueue_script('smooth-scroll');
+
+        wp_register_script('stickyjs', get_template_directory_uri() . '/js/lib/jquery.sticky.js', array('jquery'), '1.0.0'); // Custom scripts
+        wp_enqueue_script('stickyjs');
+
+        wp_register_script('myjs', get_template_directory_uri() . '/js.js', array('jquery'), '1.0.0'); // Custom scripts
+        wp_enqueue_script('myjs');
+
+
     }
 }
 
@@ -123,21 +140,13 @@ function html5blank_styles()
     wp_register_style('html5blank', get_template_directory_uri() . '/style.css', array(), '1.0', 'all');
     wp_enqueue_style('html5blank'); // Enqueue it!
 
+    wp_enqueue_style( 'bootstrap', '//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css' );
+    wp_enqueue_style('bootstrap');
+
     wp_register_style('app', get_template_directory_uri() . '/app.css', array(), '1.0', 'all');
     wp_enqueue_style('app'); // Enqueue it!
 }
 
-//Register bootstrap via CDN
-function enqueue_my_scripts() {
-    wp_enqueue_script( 'jquery', '//code.jquery.com/jquery-2.1.3.min.js', array('jquery'), '1.9.1', true); // we need the jquery library for bootsrap js to function
-    wp_enqueue_script( 'bootstrap-js', '//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"', array('jquery'), true); // all the bootstrap javascript goodness
-}
-add_action('wp_enqueue_scripts', 'enqueue_my_scripts');
-function enqueue_my_styles() {
-    wp_enqueue_style( 'bootstrap', '//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css' );
-    wp_enqueue_style( 'my-style', get_template_directory_uri() . '/style.css');
-}
-add_action('wp_enqueue_scripts', 'enqueue_my_styles');
 
 // Register HTML5 Blank Navigation
 function register_html5_menu()

@@ -23,7 +23,7 @@
         </script>
 
 	</head>
-	<body <?php body_class(); ?>>
+	<body <?php body_class(); ?> data-spy="scroll" data-target=".navbar">
 
 <!-- wrapper -->
 		<div class="container">
@@ -31,27 +31,29 @@
 <!-- header -->
 			<header class="header clear" role="banner">
 
-<!-- logo -->
+
 				<div class="row">
-					<div class="col-sm-10">
+					<div class="col-sm-3">
 						<div class="logo">
 							<a href="<?php echo home_url(); ?>">
 								<!-- svg logo - toddmotto.com/mastering-svg-use-for-a-retina-web-fallbacks-with-png-script -->
-								<img src="http://localhost:8080/wp-content/uploads/2015/02/logo-lg.png" alt="Logo" class="logo-img">
+								<img src="http://localhost:8080/wp-content/uploads/2015/02/h2ooptimizer.png" alt="Logo" class="logo-img">
 							</a>
 						</div>
 					</div>
+					<div class="col-md-7" id="slogan">
+						<img src="http://localhost:8080/wp-content/uploads/2015/02/h2oslogan.png" alt="Logo" class="logo-img">
+					</div>
+
 					<div class="col-sm-2">
 						<div class="sign-in">
 							<a href="">Sign In</a>
 						</div>
 					</div>
 				</div>
-<!-- /logo -->
-<!--				--><?php //echo get_template_directory_uri(); ?>
-<!-- nav -->
-				<nav class="navbar navbar-default" id="sticker">
-					<div class="container-fluid">
+<!--	NAVIGATION MENU			-->
+				<nav class="navbar navbar-default" data-spy="affix" data-offset-top="80">
+					<div class="container">
 						<!-- Brand and toggle get grouped for better mobile display -->
 						<div class="navbar-header">
 							<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
@@ -65,7 +67,7 @@
 
 						<!-- Collect the nav links, forms, and other content for toggling -->
 						<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-							<ul class="nav navbar-nav">
+							<ul class="nav navbar-nav container">
 <!-- query page titles for bootstrap nav-->
 							<?php	query_posts(array(
 								'post_type' => 'page',
@@ -75,7 +77,7 @@
 								));
 								?>
 								<?php if (have_posts()): while (have_posts()) : the_post(); ?>
-									<li><a href="#<?php echo $post->post_name ?>"><?php echo $post->post_name; ?></a></li>
+									<li><a data-scroll href="#<?php echo $post->post_name ?>"><?php echo $post->post_name; ?></a></li>
 								<?php endwhile; endif; ?>
 							</ul>
 						</div><!-- /.navbar-collapse -->

@@ -26,5 +26,9 @@
 		ga('create', 'UA-XXXXXXXX-XX', 'yourdomain.com');
 		ga('send', 'pageview');
 		</script>
+		<script>
+			smoothScroll.init();
+		</script>
+
 </body>
 </html>
