@@ -87,6 +87,10 @@ section {
   #data-models h3:hover {
     background-color: #fff;
   }
+  .sign-in {
+    text-align: center;
+    line-height: 50px;
+  }
 }
 .container {
   max-width: 1000px;
@@ -131,6 +135,7 @@ textarea.form-control {
 .container > .navbar-header {
   margin-right: 0;
   margin-left: 0;
+  width: 100%;
 }
 .row {
   margin-right: 0;

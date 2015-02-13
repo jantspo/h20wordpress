@@ -32,25 +32,25 @@
 			<header class="header clear" role="banner">
 
 
-				<div class="row">
-					<div class="col-sm-3">
-						<div class="logo">
-							<a href="<?php echo home_url(); ?>">
-								<!-- svg logo - toddmotto.com/mastering-svg-use-for-a-retina-web-fallbacks-with-png-script -->
-								<img src="http://localhost:8080/wp-content/uploads/2015/02/h2ooptimizer.png" alt="Logo" class="logo-img">
-							</a>
-						</div>
-					</div>
-					<div class="col-md-7" id="slogan">
-						<img src="http://localhost:8080/wp-content/uploads/2015/02/h2oslogan.png" alt="Logo" class="logo-img">
-					</div>
-
-					<div class="col-sm-2">
-						<div class="sign-in">
-							<a href="">Sign In</a>
-						</div>
-					</div>
-				</div>
+<!--				<div class="row">-->
+<!--					<div class="col-xs-12 col-sm-4 col-md-3">-->
+<!--						<div class="logo">-->
+<!--							<a href="--><?php //echo home_url(); ?><!--">-->
+<!--								<!-- svg logo - toddmotto.com/mastering-svg-use-for-a-retina-web-fallbacks-with-png-script -->
+<!--								<img src="http://localhost:8080/wp-content/uploads/2015/02/h2ooptimizer.png" alt="Logo" class="logo-img">-->
+<!--							</a>-->
+<!--						</div>-->
+<!--					</div>-->
+<!--					<div class="col-xs-12 col-sm-6 col-md-7" id="slogan">-->
+<!--						<img src="http://localhost:8080/wp-content/uploads/2015/02/h2oslogan.png" alt="Logo" class="logo-img">-->
+<!--					</div>-->
+<!---->
+<!--					<div class="col-xs-12 col-sm-2">-->
+<!--						<div class="sign-in">-->
+<!--							<a href="">Sign In</a>-->
+<!--						</div>-->
+<!--					</div>-->
+<!--				</div>-->
 <!--	NAVIGATION MENU			-->
 				<nav class="navbar navbar-default" data-spy="affix" data-offset-top="80">
 					<div class="container">
@@ -62,7 +62,25 @@
 								<span class="icon-bar"></span>
 								<span class="icon-bar"></span>
 							</button>
-<!--							<a class="navbar-brand" href="#">Brand</a>-->
+							<div class="row">
+								<div class="col-xs-12 col-sm-4 col-md-4">
+									<div class="logo">
+										<a href="<?php echo home_url(); ?>">
+											<!-- svg logo - toddmotto.com/mastering-svg-use-for-a-retina-web-fallbacks-with-png-script -->
+											<img src="http://localhost:8080/wp-content/uploads/2015/02/h2ooptimizer.png" alt="Logo" class="logo-img">
+										</a>
+									</div>
+								</div>
+								<div class="col-xs-12 col-sm-6 col-md-6" id="slogan">
+									<img src="http://localhost:8080/wp-content/uploads/2015/02/h2oslogan.png" alt="Logo" class="logo-img">
+								</div>
+
+								<div class="col-xs-12 col-sm-2">
+									<div class="sign-in">
+										<a href="">Sign In</a>
+									</div>
+								</div>
+							</div>
 						</div>
 
 						<!-- Collect the nav links, forms, and other content for toggling -->
