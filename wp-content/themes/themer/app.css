@@ -9,39 +9,119 @@
 body {
   position: relative;
 }
+h2 {
+  color: #294561;
+  font-size: 50px;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Yanone Kaffeesatz', sans-serif;
+}
 h2,
 h3 {
   text-align: center;
   text-transform: uppercase;
 }
+h3 {
+  font-size: 30px;
+}
+h4 {
+  color: #e19845;
+  font-size: 30px;
+}
+p,
+a {
+  font-family: 'PT Sans', sans-serif;
+}
 p {
   padding: 10px;
+  color: #294561;
+  font-size: 16px;
 }
-section {
-  border-bottom: 2px solid #000 ;
-}
-#data-models h3 {
-  border: 1px solid #ccc;
-  padding: 5px;
-  background-color: #e3e3e3;
+p strong {
+  font-size: 18px;
 }
 #slogan {
   padding-top: 20px;
 }
+#about,
+#data-models,
+#contact {
+  border-bottom: 4px solid #e19845;
+}
+header,
+#process,
+#farmitrx,
+#about,
+#contact {
+  background-color: #294561;
+}
+header h2,
+#process h2,
+#farmitrx h2,
+#about h2,
+#contact h2,
+header p,
+#process p,
+#farmitrx p,
+#about p,
+#contact p {
+  color: #fff;
+}
+footer {
+  background-color: #000;
+  height: 75px;
+}
+footer p {
+  color: #fff;
+}
+a#sign-in {
+  font-size: 20px;
+  text-align: right;
+  padding-top: 1em;
+  color: #fff;
+}
+a#sign-in:hover {
+  color: #e19845;
+  text-decoration: none;
+}
+#grapes {
+  background: url('http://localhost:8080/wp-content/uploads/2015/02/1500x750.gif') no-repeat center center;
+  background-size: cover;
+}
+#almonds {
+  background: url('http://localhost:8080/wp-content/uploads/2015/02/1500x750.gif') no-repeat center center;
+  background-size: cover;
+}
+#tomatoes {
+  background: url('http://localhost:8080/wp-content/uploads/2015/02/1500x750.gif') no-repeat center center;
+  background-size: cover;
+}
+#cotton {
+  background: url('http://localhost:8080/wp-content/uploads/2015/02/1500x750.gif') no-repeat center center;
+  background-size: cover;
+}
+div.panel-body {
+  height: 750px;
+}
 #process h3 {
-  height: 150px;
-  width: 150px;
-  border-radius: 50%;
-  line-height: 150px;
-  border: 1px solid #000;
+  color: #fff;
+  height: 201px;
+  width: 175px;
+  line-height: 175px;
   margin: 0 auto;
+  background: url('http://localhost:8080/wp-content/uploads/2015/02/process_circle.png') no-repeat center center;
+  background-size: cover;
 }
 #process section {
   border: none;
 }
-#process #step-1 h3 {
-  background: url('http://localhost:8080/wp-content/uploads/2015/02/MegaSprite.gif') no-repeat center center;
-  background-size: cover;
+#data-models h3 {
+  color: #294561;
 }
 .sign-in {
   line-height: 80px;
@@ -84,6 +164,11 @@ section {
   .active {
     display: block;
   }
+  #data-models h3 {
+    border: 1px solid #ccc;
+    padding: 5px;
+    background-color: #e3e3e3;
+  }
   #data-models h3:hover {
     background-color: #fff;
   }
@@ -93,41 +178,74 @@ section {
   }
 }
 .container {
-  max-width: 1000px;
+  max-width: 1200px;
 }
 .container-fluid,
 .container {
   padding-right: 0;
   padding-left: 0;
 }
+.navbar-default .navbar-nav > li > a:focus,
+.navbar-default .navbar-nav > li > a:hover {
+  color: #e19845;
+}
+.navbar-nav {
+  width: 100%;
+}
 .navbar {
   margin-bottom: 0;
+  min-height: 70px;
 }
 .navbar li a {
   text-transform: uppercase;
+  text-align: right;
 }
 .navbar-default {
-  background-color: #fff;
+  background-color: #294561;
   z-index: 100;
+  border: 0;
 }
 .navbar-default .navbar-nav > li > a {
+  text-align: center;
   font-weight: 700;
   font-size: 16px;
+  color: #889ebb;
 }
 .affix {
   top: 0;
+  width: 100%;
 }
-textarea.form-control {
-  margin: 10px 0;
+.form-group {
+  width: 100%;
+}
+.form-group .form-control {
+  width: 100%;
+  margin-bottom: 10px;
+  border-radius: 0;
 }
 .btn-group-lg > .btn,
 .btn-lg {
+  width: 200px;
   border-radius: 0;
   margin-bottom: 15px;
+  background-color: #e19845;
+  border: 0;
+}
+.btn-group-lg > .btn a,
+.btn-lg a {
+  font-weight: bold;
+  font-size: 20px;
+}
+.btn-group-lg > .btn a:hover,
+.btn-lg a:hover {
+  color: #fff;
+}
+.btn-group-lg > .btn:hover,
+.btn-lg:hover {
+  background-color: #294561;
 }
 @media (min-width: 1000px) {
   .navbar-nav > li {
-    float: left;
     width: 16.666667%;
     text-align: center;
   }
@@ -144,8 +262,138 @@ textarea.form-control {
 .navbar-default .navbar-toggle {
   margin-left: 15px;
 }
-#farmitrx {
-  background: url(http://localhost:8080/wp-content/uploads/2015/02/FARMitRx-Interface-Screen-Shot-4.jpg) no-repeat;
-  background-size: cover;
-  height: 1000px;
+.navbar-collapse {
+  padding: 0;
+}
+@media (min-width: 768px) and (max-width: 1000px) {
+  .navbar-nav {
+    width: 100%;
+  }
+  .navbar-nav > li {
+    text-align: center;
+  }
+}
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus {
+  color: #fff;
+  background-color: #e19845;
+}
+.navbar-brand {
+  padding: 0 15px;
+}
+.navbar-toggle {
+  margin-right: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+@media (min-width: 900px) {
+  div.accordion {
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+    background-color: #666;
+    overflow: auto;
+    border-radius: 5px;
+    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.3);
+  }
+  div.accordion section {
+    position: relative;
+    display: block;
+    float: left;
+    width: 2em;
+    height: 750px;
+    margin: 0.5em 0 0.5em 0.5em;
+    color: #333;
+    background-color: #333;
+    overflow: hidden;
+    border-radius: 3px;
+  }
+  div.accordion section h2 {
+    position: absolute;
+    font-size: 1em;
+    font-weight: bold;
+    width: 57em;
+    height: 2em;
+    top: 54em;
+    left: 0;
+    text-indent: 1em;
+    text-align: left;
+    padding: 0;
+    margin: 0;
+    display: block;
+    line-height: 2em;
+    outline: 0 none;
+    float: left;
+    background-color: #527F2A;
+    overflow: hidden;
+    border-radius: 3px;
+    opacity: .9;
+    -webkit-transform-origin: 0 0;
+    -moz-transform-origin: 0 0;
+    -ms-transform-origin: 0 0;
+    -o-transform-origin: 0 0;
+    transform-origin: 0 0;
+    -webkit-transform: rotate(-90deg);
+    -moz-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    -o-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+  }
+  div.accordion section h2.expanded {
+    background-color: #e19845;
+  }
+  div.accordion section div.info {
+    display: none;
+  }
+  div.accordion section .show {
+    display: block;
+    width: 100%;
+  }
+}
+@media (max-width: 900px) {
+  .accordion {
+    display: block;
+    width: 30em;
+    padding: 0.5em 0.5em 1px 0.5em;
+    margin: 0 auto;
+    background-color: #666;
+    border-radius: 5px;
+    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.3);
+  }
+  .accordion section {
+    display: block;
+    width: 28em;
+    height: 2em;
+    padding: 0 1em;
+    margin: 0 0 0.5em 0;
+    color: #333;
+    background-color: #333;
+    overflow: hidden;
+    border-radius: 3px;
+  }
+  .accordion section h2 {
+    font-size: 1em;
+    font-weight: bold;
+    width: 100%;
+    line-height: 2em;
+    padding: 0;
+    margin: 0;
+    color: #fff;
+    display: block;
+    text-decoration: none;
+    outline: 0 none;
+    background-color: #527F2A;
+    opacity: .9;
+  }
+  .accordion section h2.expanded {
+    background-color: #e19845;
+  }
+  .accordion section div.info {
+    display: none;
+  }
+  .accordion section .show {
+    display: block;
+    height: 100px;
+  }
 }

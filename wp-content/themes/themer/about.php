@@ -1,6 +1,8 @@
 <!-- ABOUT US SECTION-->
-<div class="row">
-    <h2><?php the_title(); ?></h2>
-    <span id="three-column"><?php the_content(); ?></span>
-    <br class="clear">
+<div class="container">
+    <div class="row">
+        <h2><?php the_title(); ?></h2>
+        <span id="three-column"><?php the_content(); ?></span>
+        <br class="clear">
+    </div>
 </div>
