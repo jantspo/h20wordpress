@@ -346,6 +346,7 @@
 	 * @private
 	 */
 	var eventHandler = function (event) {
+		debugger;
 		var toggle = getClosest(event.target, '[data-scroll]');
 		if ( toggle && toggle.tagName.toLowerCase() === 'a' ) {
 			event.preventDefault(); // Prevent default click event

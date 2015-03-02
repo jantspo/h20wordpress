@@ -1,15 +1,15 @@
 //=====================================VARIABLES
 @primary: #294561;
-@seconday: #fff;
+@secondary: #fff;
 @tertiary: #e19845;
-
+@linkColor: lighten(hsl(214, 27%, 63%), 30%);
 
 
 
 
 //==================================================== GLOBAL STYLING
 
-
+//applying border-box and setting a font default
 *, *:before, *:after{
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -17,22 +17,19 @@
   font-size: 14px;
 }
 
-body {
-  position: relative;
-}
-h2{
-  color: @primary;
-  font-size: 50px;
-}
-
-
+//=========General heading styles
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Yanone Kaffeesatz', sans-serif;
 }
 
+
 h2, h3{
   text-align: center;
   text-transform: uppercase;
+}
+
+h2{
+  font-size: 50px;
 }
 
 h3{
@@ -44,6 +41,7 @@ h4{
   font-size: 30px;
 }
 
+//========General font stylings
 p, a {
   font-family: 'PT Sans', sans-serif;
 }
@@ -57,20 +55,13 @@ p{
   }
 }
 
-
-
-
-
-
-#slogan{
-  padding-top:20px;
-}
-
-
+//======section borders
 #about, #data-models, #contact{
   border-bottom:4px solid @tertiary ;
 }
 
+//====================================================SECTION SPECIFIC STYLING =====================================
+//=====section backgrounds & font-colors
 header, #process, #farmitrx, #about, #contact{
   background-color: @primary;
   h2, p {
@@ -86,25 +77,43 @@ footer{
   }
 }
 
-//====================================================SECTION SPECIFIC STYLING =====================================
-
-
 //===============HEADER
+@media (min-width: 992px) {
+  a#sign-in-large {
+    font-size: 20px;
+    text-align: right;
+    padding-top: 1em;
+    color: #fff;
+    &:hover {
+      color: @tertiary;
+      text-decoration: none;
+    }
+  }
+  a#sign-in-mobile {
+    display: none;
+  }
+}
 
-a#sign-in{
-  font-size: 20px;
-  text-align: right;
-  padding-top:1em;
-  color: #fff;
-  &:hover{
-    color: @tertiary;
-    text-decoration: none;
+//====moves sign-in to toggle menu on smaller devices and hides sign in @ top corner
+@media (max-width: 991px) {
+  a#sign-in-mobile {
+    display: block;
+    font-size: 20px;
+    text-align: center;
+    color: #fff;
+    &:hover {
+      color: @tertiary;
+      text-decoration: none;
+    }
+  }
+  a#sign-in-large {
+    display: none;
   }
 }
 
 
-
-//farmitrx section styling
+//======= place holders farmitrx section styling
+//======= section design not finalized
 #grapes{
   background: url('http://localhost:8080/wp-content/uploads/2015/02/1500x750.gif')no-repeat center center;
   background-size: cover;
@@ -122,12 +131,11 @@ a#sign-in{
   background-size: cover;
 }
 
-//farmit accordion
+//=======farmit accordion ======just for testing
 
 div.panel-body{
   height: 750px;
 }
-
 
 
 
@@ -138,14 +146,27 @@ div.panel-body{
     height: 201px;
     width: 175px;
     line-height: 175px;
-    margin: 0 auto;
-    background: url('http://localhost:8080/wp-content/uploads/2015/02/process_circle.png') no-repeat center center;
+    margin: 0 auto 10px;
+    text-indent: -9999px;
+  }
+  #map h3{
+    background: url('../../../uploads/2015/02/phase1.png') no-repeat center center;
     background-size: cover;
   }
-  section{
-    border: none;
+  #sample h3{
+    background: url('../../../uploads/2015/02/phase2.png') no-repeat center center;
+    background-size: cover;
+  }
+  #design h3{
+    background: url('../../../uploads/2015/02/phase3.png') no-repeat center center;
+    background-size: cover;
+  }
+  #inform h3{
+    background: url('../../../uploads/2015/02/phase4.png') no-repeat center center;
+    background-size: cover;
   }
 }
+
 #data-models{
   h3{
     color: @primary;
@@ -156,15 +177,36 @@ div.panel-body{
   line-height:80px;
 }
 
-
-// -------------- CLASSES ---------------
-
-
-
-
-
-
 // =================================================== MEDIA QUERIES -==========================
+//ABOUT AND CONSULTING COLUMNS
+
+@media (max-width: 480px){
+  //hide content on smaller devices
+  .content{
+    display: none;
+  }
+  .active{
+    display: block;
+  }
+  //sets data-model buttons for expanding content
+  #data-models {
+    h3{
+      border: 1px solid #ccc;
+      padding: 5px;
+      background-color: @tertiary;
+      &:hover{
+        color: #fff;
+        background-color: @primary;
+      }
+    }
+
+  }
+  .sign-in {
+    text-align: center;
+    line-height: 50px;
+  }
+}
+
 //ABOUT AND CONSULTING COLUMNS
 @media (min-width: 768px) {
   #two-column p {
@@ -197,31 +239,6 @@ div.panel-body{
   }
 }
 
-@media (max-width: 480px){
-  .content{
-    display: none;
-  }
-
-  .active{
-    display: block;
-  }
-  #data-models {
-    h3{
-      border: 1px solid #ccc;
-      padding: 5px;
-      background-color: #e3e3e3;
-      &:hover{
-        background-color: #fff;
-      }
-    }
-
-  }
-  .sign-in {
-    text-align: center;
-    line-height: 50px;
-  }
-
-}
 
 
 //================================== BOOTSTRAP OVERRIDES ===============================
@@ -233,10 +250,16 @@ div.panel-body{
   padding-right: 0;
   padding-left: 0;
 }
-//BOOTSTRAP Navigation Overrides
 
-.navbar-default .navbar-nav>li>a:focus, .navbar-default .navbar-nav>li>a:hover {
+
+//BOOTSTRAP Navigation Overrides
+.navbar-default .navbar-nav>li>a:focus{
   color: @tertiary;
+}
+
+.navbar-default .navbar-nav>li>a:hover{
+  color:#fff;
+
 }
 
 .navbar-nav{
@@ -244,10 +267,8 @@ div.panel-body{
 
 }
 
-
 .navbar {
   margin-bottom: 0;
-  min-height: 70px;
   li a {
     text-transform: uppercase;
     text-align: right;
@@ -263,11 +284,13 @@ div.panel-body{
   text-align: center;
   font-weight: 700;
   font-size: 16px;
-  color: #889ebb;
+  color: @linkColor;
 }
 .affix{
   top:0;
   width: 100%;
+  border-bottom: 5px solid @tertiary;
+  border-radius: 0;
 }
 
 .form-group{
@@ -279,7 +302,6 @@ div.panel-body{
   }
 }
 
-
 .btn-group-lg>.btn, .btn-lg {
   width: 200px;
   border-radius: 0;
@@ -290,7 +312,7 @@ div.panel-body{
     font-weight: bold;
     font-size: 20px;
     &:hover{
-      color: #fff;
+      color: @secondary;
     }
   }
   &:hover{
@@ -329,8 +351,17 @@ div.panel-body{
   padding: 0;
 }
 
+.nav>li{
+  margin: 0;
+  border-bottom: 1px solid #fff;
+  &:hover{
+    background-color: @tertiary;
+  }
+
+}
+
 //bootstrap media queries overrides
-@media (min-width: 768px) and (max-width: 1000px) {
+@media (min-width: 992px) {
   .navbar-nav {
     width: 100%;
   }
@@ -338,11 +369,12 @@ div.panel-body{
   .navbar-nav > li {
 //    width: 32.66667%;
     text-align: center;
+    border-bottom: none;
   }
 }
 
 .navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:hover, .navbar-default .navbar-nav>.active>a:focus {
-  color: #fff;
+  color: @secondary;
   background-color: @tertiary;
 }
 
@@ -350,12 +382,58 @@ div.panel-body{
   padding: 0 15px;
 }
 
+@media(max-width: 360px){
+  .navbar-brand img{
+    margin-top: 15px;
+  }
+}
+
+@media(max-width: 991px ){
+  .navbar-default .navbar-brand {
+    margin-bottom: 10px;
+  }
+}
+
 .navbar-toggle {
   margin-right: 0;
   margin-top: 0;
   margin-bottom: 0;
+  &:focus {
+    background-color: #ddd;
+  }
 }
-  //=============================================testing
+.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle {
+  border-color: @tertiary;
+  margin-top: 15px;
+  &:focus, &:hover {
+    background-color: @tertiary;
+  }
+}
+
+a.contact-btn {
+  color:@linkColor;
+  height: 50px;
+  width: 200px;
+  background-color: @tertiary;
+  display: block;
+  text-align: center;
+  font-size: 22px;
+  line-height: 50px;
+  margin-bottom: 15px;
+
+/* font-weight: normal; */
+  &:hover{
+    color: #fff;
+    background-color: @primary;
+    border:1px solid #fff;
+    text-decoration: none;
+  }
+}
+
+
+
+
+  //=============================================testing styles for accordion
   @media (min-width: 900px) {
     div.accordion {
       display: block;
@@ -429,7 +507,7 @@ div.panel-body{
   @media (max-width: 900px) {
     .accordion {
       display: block;
-      width: 30em;
+      width: 100%;
       padding: 0.5em 0.5em 1px 0.5em;
       margin: 0 auto;
       background-color: #666;
@@ -454,7 +532,7 @@ div.panel-body{
           line-height: 2em;
           padding: 0;
           margin: 0;
-          color: #fff;
+          color: @secondary;
           display: block;
           text-decoration: none;
           outline: 0 none;

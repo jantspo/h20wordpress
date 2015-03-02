@@ -6,13 +6,6 @@
   box-sizing: border-box;
   font-size: 14px;
 }
-body {
-  position: relative;
-}
-h2 {
-  color: #294561;
-  font-size: 50px;
-}
 h1,
 h2,
 h3,
@@ -25,6 +18,9 @@ h2,
 h3 {
   text-align: center;
   text-transform: uppercase;
+}
+h2 {
+  font-size: 50px;
 }
 h3 {
   font-size: 30px;
@@ -44,9 +40,6 @@ p {
 }
 p strong {
   font-size: 18px;
-}
-#slogan {
-  padding-top: 20px;
 }
 #about,
 #data-models,
@@ -79,15 +72,35 @@ footer {
 footer p {
   color: #fff;
 }
-a#sign-in {
-  font-size: 20px;
-  text-align: right;
-  padding-top: 1em;
-  color: #fff;
+@media (min-width: 992px) {
+  a#sign-in-large {
+    font-size: 20px;
+    text-align: right;
+    padding-top: 1em;
+    color: #fff;
+  }
+  a#sign-in-large:hover {
+    color: #e19845;
+    text-decoration: none;
+  }
+  a#sign-in-mobile {
+    display: none;
+  }
 }
-a#sign-in:hover {
-  color: #e19845;
-  text-decoration: none;
+@media (max-width: 991px) {
+  a#sign-in-mobile {
+    display: block;
+    font-size: 20px;
+    text-align: center;
+    color: #fff;
+  }
+  a#sign-in-mobile:hover {
+    color: #e19845;
+    text-decoration: none;
+  }
+  a#sign-in-large {
+    display: none;
+  }
 }
 #grapes {
   background: url('http://localhost:8080/wp-content/uploads/2015/02/1500x750.gif') no-repeat center center;
@@ -113,18 +126,51 @@ div.panel-body {
   height: 201px;
   width: 175px;
   line-height: 175px;
-  margin: 0 auto;
-  background: url('http://localhost:8080/wp-content/uploads/2015/02/process_circle.png') no-repeat center center;
+  margin: 0 auto 10px;
+  text-indent: -9999px;
+}
+#process #map h3 {
+  background: url('../../../uploads/2015/02/phase1.png') no-repeat center center;
   background-size: cover;
 }
-#process section {
-  border: none;
+#process #sample h3 {
+  background: url('../../../uploads/2015/02/phase2.png') no-repeat center center;
+  background-size: cover;
+}
+#process #design h3 {
+  background: url('../../../uploads/2015/02/phase3.png') no-repeat center center;
+  background-size: cover;
+}
+#process #inform h3 {
+  background: url('../../../uploads/2015/02/phase4.png') no-repeat center center;
+  background-size: cover;
 }
 #data-models h3 {
   color: #294561;
 }
 .sign-in {
   line-height: 80px;
+}
+@media (max-width: 480px) {
+  .content {
+    display: none;
+  }
+  .active {
+    display: block;
+  }
+  #data-models h3 {
+    border: 1px solid #ccc;
+    padding: 5px;
+    background-color: #e19845;
+  }
+  #data-models h3:hover {
+    color: #fff;
+    background-color: #294561;
+  }
+  .sign-in {
+    text-align: center;
+    line-height: 50px;
+  }
 }
 @media (min-width: 768px) {
   #two-column p {
@@ -157,26 +203,6 @@ div.panel-body {
     column-gap: 30px;
   }
 }
-@media (max-width: 480px) {
-  .content {
-    display: none;
-  }
-  .active {
-    display: block;
-  }
-  #data-models h3 {
-    border: 1px solid #ccc;
-    padding: 5px;
-    background-color: #e3e3e3;
-  }
-  #data-models h3:hover {
-    background-color: #fff;
-  }
-  .sign-in {
-    text-align: center;
-    line-height: 50px;
-  }
-}
 .container {
   max-width: 1200px;
 }
@@ -185,16 +211,17 @@ div.panel-body {
   padding-right: 0;
   padding-left: 0;
 }
-.navbar-default .navbar-nav > li > a:focus,
-.navbar-default .navbar-nav > li > a:hover {
+.navbar-default .navbar-nav > li > a:focus {
   color: #e19845;
+}
+.navbar-default .navbar-nav > li > a:hover {
+  color: #fff;
 }
 .navbar-nav {
   width: 100%;
 }
 .navbar {
   margin-bottom: 0;
-  min-height: 70px;
 }
 .navbar li a {
   text-transform: uppercase;
@@ -209,11 +236,13 @@ div.panel-body {
   text-align: center;
   font-weight: 700;
   font-size: 16px;
-  color: #889ebb;
+  color: #e8edf2;
 }
 .affix {
   top: 0;
   width: 100%;
+  border-bottom: 5px solid #e19845;
+  border-radius: 0;
 }
 .form-group {
   width: 100%;
@@ -238,7 +267,7 @@ div.panel-body {
 }
 .btn-group-lg > .btn a:hover,
 .btn-lg a:hover {
-  color: #fff;
+  color: #ffffff;
 }
 .btn-group-lg > .btn:hover,
 .btn-lg:hover {
@@ -265,27 +294,77 @@ div.panel-body {
 .navbar-collapse {
   padding: 0;
 }
-@media (min-width: 768px) and (max-width: 1000px) {
+.nav > li {
+  margin: 0;
+  border-bottom: 1px solid #fff;
+}
+.nav > li:hover {
+  background-color: #e19845;
+}
+@media (min-width: 992px) {
   .navbar-nav {
     width: 100%;
   }
   .navbar-nav > li {
     text-align: center;
+    border-bottom: none;
   }
 }
 .navbar-default .navbar-nav > .active > a,
 .navbar-default .navbar-nav > .active > a:hover,
 .navbar-default .navbar-nav > .active > a:focus {
-  color: #fff;
+  color: #ffffff;
   background-color: #e19845;
 }
 .navbar-brand {
   padding: 0 15px;
 }
+@media (max-width: 360px) {
+  .navbar-brand img {
+    margin-top: 15px;
+  }
+}
+@media (max-width: 991px) {
+  .navbar-default .navbar-brand {
+    margin-bottom: 10px;
+  }
+}
 .navbar-toggle {
   margin-right: 0;
   margin-top: 0;
   margin-bottom: 0;
+}
+.navbar-toggle:focus {
+  background-color: #ddd;
+}
+.navbar-default .navbar-toggle:hover,
+.navbar-default .navbar-toggle {
+  border-color: #e19845;
+  margin-top: 15px;
+}
+.navbar-default .navbar-toggle:hover:focus,
+.navbar-default .navbar-toggle:focus,
+.navbar-default .navbar-toggle:hover:hover,
+.navbar-default .navbar-toggle:hover {
+  background-color: #e19845;
+}
+a.contact-btn {
+  color: #e8edf2;
+  height: 50px;
+  width: 200px;
+  background-color: #e19845;
+  display: block;
+  text-align: center;
+  font-size: 22px;
+  line-height: 50px;
+  margin-bottom: 15px;
+  /* font-weight: normal; */
+}
+a.contact-btn:hover {
+  color: #fff;
+  background-color: #294561;
+  border: 1px solid #fff;
+  text-decoration: none;
 }
 @media (min-width: 900px) {
   div.accordion {
@@ -354,7 +433,7 @@ div.panel-body {
 @media (max-width: 900px) {
   .accordion {
     display: block;
-    width: 30em;
+    width: 100%;
     padding: 0.5em 0.5em 1px 0.5em;
     margin: 0 auto;
     background-color: #666;
@@ -379,7 +458,7 @@ div.panel-body {
     line-height: 2em;
     padding: 0;
     margin: 0;
-    color: #fff;
+    color: #ffffff;
     display: block;
     text-decoration: none;
     outline: 0 none;

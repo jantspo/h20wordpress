@@ -25,8 +25,11 @@
 		ga('create', 'UA-XXXXXXXX-XX', 'yourdomain.com');
 		ga('send', 'pageview');
 		</script>
+<!--	Smooth Scroll init 		-->
 		<script>
-			smoothScroll.init();
+			smoothScroll.init({
+				offset: 84
+			});
 		</script>
 
 </body>

@@ -2,7 +2,7 @@
 <div class="container">
     <?php the_content(); ?>
     <br class="clear">
-
+<!-- All just placeholder until final styling and content comes in-->
     <div class="accordion">
 
         <section id="acc1" class="tab">
